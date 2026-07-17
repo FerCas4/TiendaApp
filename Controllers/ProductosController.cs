@@ -29,5 +29,12 @@ await _context.SaveChangesAsync();
 return RedirectToAction(nameof(Index));
 }
 return View(producto);
-}}
-// NOTA: Implementar Edit y Delete siguiendo la misma lógica Async.
+}
+
+[Route("promociones-del-mes/barrio-norte")]
+public IActionResult OfertasEspeciales()
+{
+    ViewData["Message"] = "Ofertas exclusivas para los vecinos del barrio.";
+    return View();
+}
+}
